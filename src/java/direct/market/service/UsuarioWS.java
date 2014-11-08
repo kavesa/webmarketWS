@@ -17,7 +17,7 @@ import javax.jws.WebParam;
  *
  * @author kavesa
  */
-@WebService
+@WebService(serviceName="UsuarioWS")
 public class UsuarioWS {
 
     @WebMethod(operationName = "altaUsuario")
