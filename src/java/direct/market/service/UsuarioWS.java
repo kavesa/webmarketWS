@@ -11,7 +11,6 @@ import java.util.Date;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 
 /**
  *
@@ -55,19 +54,29 @@ public class UsuarioWS {
         Factory.getInstance().getUsuarioController().modificarCliente(u, numeroOrdenCompra);
     }
     
-//    @WebMethod
-//    boolean existeCliente(String nickname);
+    @WebMethod(operationName = "existeCliente")
+    public boolean existeCliente(String nickname){
+        return Factory.getInstance().getUsuarioController().existeCliente(nickname);
+    }
     
-//    @WebMethod
-//    boolean existeEmail(String email);
+    @WebMethod(operationName = "existeEmail")
+    public boolean existeEmail(String email){
+        return Factory.getInstance().getUsuarioController().existeEmail(email);
+    }
     
-//    @WebMethod
-//    DataUsuario login(String nickname, String pass)throws UsuarioException;
+    @WebMethod(operationName = "login")
+    public DataUsuario login(String nickname, String pass)throws UsuarioException{
+        return Factory.getInstance().getUsuarioController().login(nickname, pass);
+    }
     
-//    @WebMethod
-//    boolean usuarioComproProducto(String nickname, String prodRef) throws UsuarioException;
+    @WebMethod(operationName = "usuarioComproProducto")
+    public boolean usuarioComproProducto(String nickname, String prodRef) throws UsuarioException{
+        return Factory.getInstance().getUsuarioController().usuarioComproProducto(nickname, prodRef);
+    }
     
-//    @WebMethod
-//    void cambiarMailing(String nickname, boolean mailing);
+    @WebMethod(operationName = "cambiarMailing")
+    public void cambiarMailing(String nickname, boolean mailing){
+        Factory.getInstance().getUsuarioController().cambiarMailing(nickname, mailing);
+    }
     
 }
