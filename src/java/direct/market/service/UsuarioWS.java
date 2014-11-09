@@ -16,6 +16,7 @@ import javax.jws.WebMethod;
  *
  * @author kavesa
  */
+
 @WebService(serviceName="UsuarioWS")
 public class UsuarioWS {
 
