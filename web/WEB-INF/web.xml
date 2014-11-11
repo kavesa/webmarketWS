@@ -8,9 +8,36 @@
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ProductoWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoriaWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>OrdenCompraWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioWS</servlet-name>
         <url-pattern>/UsuarioWS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductoWS</servlet-name>
+        <url-pattern>/ProductoWS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoriaWS</servlet-name>
+        <url-pattern>/CategoriaWS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrdenCompraWS</servlet-name>
+        <url-pattern>/OrdenCompraWS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

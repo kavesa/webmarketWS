@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
   <endpoint implementation="direct.market.service.UsuarioWS" name="UsuarioWS" url-pattern="/UsuarioWS"/>
+  <endpoint implementation="direct.market.service.CategoriaWS" name="CategoriaWS" url-pattern="/CategoriaWS"/>
+  <endpoint implementation="direct.market.service.OrdenCompraWS" name="OrdenCompraWS" url-pattern="/OrdenCompraWS"/>
+  <endpoint implementation="direct.market.service.ProductoWS" name="ProductoWS" url-pattern="/ProductoWS"/>
 </endpoints>
