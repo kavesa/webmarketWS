@@ -12,7 +12,6 @@ import direct.market.factory.Factory;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 
 /**
  *
@@ -77,4 +76,5 @@ public class ProductoWS {
     public List<DataReclamo> getReclamosPorProducto(String refProd) throws ProductoException{
         return Factory.getInstance().getProductoController().getReclamosPorProducto(refProd);
     }
+
 }
