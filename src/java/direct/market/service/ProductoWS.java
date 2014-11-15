@@ -77,4 +77,9 @@ public class ProductoWS {
         return Factory.getInstance().getProductoController().getReclamosPorProducto(refProd);
     }
 
+    @WebMethod(operationName = "agregarPuntaje")
+    public void agregarPuntaje(String refProd, String nickname, int puntos) throws ProductoException{
+        Factory.getInstance().getProductoController().agregarPuntaje(refProd, nickname, puntos);
+    }
+
 }

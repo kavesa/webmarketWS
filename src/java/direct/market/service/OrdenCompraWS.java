@@ -36,7 +36,7 @@ public class OrdenCompraWS {
     }
 
     @WebMethod(operationName = "getLineasOC")
-    List<DataLineaOC> getLineasOC(String numeroOC) {
+    public List<DataLineaOC> getLineasOC(String numeroOC) {
         return Factory.getInstance().getOrdenCompraController().getLineasOC(numeroOC);
     }
 
@@ -46,12 +46,18 @@ public class OrdenCompraWS {
     }
 
     @WebMethod(operationName = "cancelarOC")
-    void cancelarOC(int numOC) {
+    public void cancelarOC(int numOC) {
         Factory.getInstance().getOrdenCompraController().cancelarOC(numOC);
     }
 
     @WebMethod(operationName = "ordenPreparada")
-    void ordenPreparada(int numOC) {
+    public void ordenPreparada(int numOC) {
         Factory.getInstance().getOrdenCompraController().ordenPreparada(numOC);
     }
+
+    @WebMethod(operationName = "ordenConfirmada")
+    public void ordenConfirmada(int numOC) {
+        Factory.getInstance().getOrdenCompraController().ordenConfirmada(numOC);
+    }
+
 }
