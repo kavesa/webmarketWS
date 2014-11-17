@@ -6,6 +6,7 @@ package direct.market.service;
 
 import direct.market.datatype.DataComentario;
 import direct.market.datatype.DataProducto;
+import direct.market.datatype.DataPuntajeProducto;
 import direct.market.datatype.DataReclamo;
 import direct.market.exceptions.ProductoException;
 import direct.market.factory.Factory;
@@ -80,6 +81,11 @@ public class ProductoWS {
     @WebMethod(operationName = "agregarPuntaje")
     public void agregarPuntaje(String refProd, String nickname, int puntos) throws ProductoException{
         Factory.getInstance().getProductoController().agregarPuntaje(refProd, nickname, puntos);
+    }
+
+    @WebMethod(operationName = "agregarPuntajeDataPuntajeProducto")
+    public void agregarPuntajeDataPuntajeProducto(DataPuntajeProducto dpp, String idProd) throws ProductoException{
+        Factory.getInstance().getProductoController().agregarPuntajeDataPuntajeProducto(dpp, idProd);
     }
 
 }
